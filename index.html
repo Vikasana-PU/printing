@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Our 3D Printing Service!</h1>
+
+        <p>Order your custom 3D printed items with us. Act early and save money! Prices will be lower for early birds.</p>
+
+        <p>Our 3D Printer has a build size of 25x25x30 cm.</p>
+
+        <p>Click the button below to inquire about pricing, place an order, and provide additional details:</p>
+
+        <a href="#" id="orderButton">
+            <button class="order-button">Inquire about Pricing and Place Order</button>
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('orderButton').addEventListener('click', function() {
+            var emailSubject = encodeURIComponent('3D Printing Inquiry and Order');
+            var emailBody = encodeURIComponent(
+                'Hello there,\n' +
+                'I am interested in ordering a 3D printed item and have attached the STL file for your reference.\n' +
+                'Please provide details on pricing, availability, and the expected delivery date.\n' +
+                'Details:\n- 3D Printer Build Size: 25x25x30 cm\n\nThank you!'
+            );
+            var mailtoLink = 'mailto:hopefor0b001@gmail.com?subject=' + emailSubject + '&body=' + emailBody;
+            window.location.href = mailtoLink;
+        });
+    </script>
+
+</body>
+</html>
