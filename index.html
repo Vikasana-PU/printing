@@ -21,7 +21,9 @@
             <button class="order-button">Inquire about Pricing and Place Order</button>
         </a>
     </div>
-
+    <div class="clock">
+    <div class="flipclock" id="flipclock-1"></div>
+</div>
     <script>
         document.getElementById('orderButton').addEventListener('click', function() {
             var emailSubject = encodeURIComponent('3D Printing Inquiry and Order');
@@ -35,6 +37,8 @@
             window.location.href = mailtoLink;
         });
     </script>
+
+    <script src="./script.js"></script>
 
 </body>
 </html>
